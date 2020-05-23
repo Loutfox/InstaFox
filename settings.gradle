@@ -1,0 +1,2 @@
+rootProject.name='InstaFox'
+include ':app'
