@@ -30,6 +30,8 @@ import org.json.JSONObject;
 
 import java.io.File;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 
 public class MainActivity extends AppCompatActivity {
     public static int REQUEST_EXTERNAL_STORAGE = 1;
@@ -43,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        new SweetAlertDialog(this)
+                .setTitleText("Welcome on InstaFox !")
+                .setContentText("Type the username of the person you want in Instagram to see his profile picture in large size with the possibility of download !")
+                .show();
         url = "https://instagram.frba3-1.fna.fbcdn.net/v/t51.2885-19/s320x320/72114074_994859947556229_1533699290591920128_n.jpg?_nc_ht=instagram.frba3-1.fna.fbcdn.net&_nc_ohc=-f9AdMMMo-QAX9hKKOM&oh=d37408ecffe57a24f1bc038648c7e586&oe=5EF2D464";
         username = "loutfialiluch";
         profilePicture = findViewById(R.id.imgProfilePic);
